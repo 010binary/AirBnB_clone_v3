@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" objects that handle all default RestFul API actions for States """
+""" objects that handle all routes for RestFul API actions on States """
 from models.state import State
 from models import storage
 from api.v1.views import app_views
