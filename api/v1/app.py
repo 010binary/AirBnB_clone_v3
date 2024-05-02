@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Flask App that integrates with AirBnB static HTML Template
+init my app
 """
 from api.v1.views import app_views
 from flask import Flask, jsonify, make_response
@@ -69,10 +69,5 @@ def setup_global_errors():
 
 
 if __name__ == "__main__":
-    """
-    MAIN Flask App
-    """
-    # initializes global error handling
     setup_global_errors()
-    # start Flask app
     app.run(host=host, port=port, threaded=True)
