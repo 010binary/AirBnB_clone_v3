@@ -76,8 +76,13 @@ def delete_review(review_id):
                  strict_slashes=False)
 @swag_from('documentation/reviews/post_reviews.yml', methods=['POST'])
 def post_review(place_id):
-    """
-    Creates a Review
+    """Creates a Review
+
+    Args:
+        place_id (int): id for the specific place
+
+    Returns:
+        Dict: json returning the detail for posting a review
     """
     place = storage.get(Place, place_id)
 
@@ -108,8 +113,13 @@ def post_review(place_id):
 @app_views.route('/reviews/<review_id>', methods=['PUT'], strict_slashes=False)
 @swag_from('documentation/reviews/put_reviews.yml', methods=['PUT'])
 def put_review(review_id):
-    """
-    Updates a Review
+    """Updates a Review
+
+    Args:
+        review_id (int): id for the specific place
+
+    Returns:
+        Dict: json returning the detail for putting a review
     """
     review = storage.get(Review, review_id)
 
